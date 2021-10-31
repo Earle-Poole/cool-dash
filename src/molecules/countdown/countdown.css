@@ -1,0 +1,13 @@
+.countdownWidget {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 25%;
+    background-color: #97B8FF;
+    border: 2px solid black; 
+    color: black;
+}
+
+.tick {
+    font-size: 2em;
+}

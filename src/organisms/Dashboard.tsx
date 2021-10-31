@@ -3,6 +3,7 @@ import Messages from '../molecules/message/Messages';
 import Weather from '../molecules/weather/Weather';
 import styles from './dashboard.module.css';
 import ToDo from '../molecules/toDo/ToDo';
+import Countdown from '../molecules/countdown/countdown';
 
 const Dashboard = () => {
   return (
@@ -15,6 +16,9 @@ const Dashboard = () => {
       </Container>
       <Container>
         <ToDo />
+      </Container>
+      <Container>
+        <Countdown />
       </Container>
     </div>
   );
