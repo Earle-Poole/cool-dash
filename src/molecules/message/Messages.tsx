@@ -4,6 +4,7 @@ import MessagesLogin from './MessagesLogin';
 
 function Messages() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState('');
   return (
     <MessagesContainer>
       <MessageHeader>Messages</MessageHeader>
@@ -12,7 +13,14 @@ function Messages() {
   );
 }
 
-const MessagesContainer = styled.div``;
-const MessageHeader = styled.div``;
+const MessagesContainer = styled.div`
+  padding: 1rem;
+`;
+const MessageHeader = styled.h5`
+  padding: 0;
+  margin: 0;
+  color: lightblue;
+  font-size: 1.5rem;
+`;  
 
 export default Messages;
