@@ -1,6 +1,7 @@
-import Container from '../molecules/container/Container'
-import Weather from '../molecules/weather/Weather'
-import styles from './dashboard.module.css'
+import Container from "../molecules/container/Container";
+import ToDo from "../molecules/toDo/ToDo";
+import Weather from "../molecules/weather/Weather";
+import styles from "./dashboard.module.css";
 
 const Dashboard = () => {
   return (
@@ -8,8 +9,11 @@ const Dashboard = () => {
       <Container>
         <Weather />
       </Container>
+      <Container>
+        <ToDo />
+      </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
