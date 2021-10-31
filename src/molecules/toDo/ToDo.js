@@ -5,7 +5,7 @@ import Form from "./Form.js";
 function ToDo() {
   return (
     <div className="container">
-      <h3>To Do Container</h3>
+      <h3>To Do List</h3>
       <Form />
     </div>
   );
