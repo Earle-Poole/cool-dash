@@ -1,16 +1,17 @@
 import styles from './container.module.css'
 import Draggable from 'react-draggable'
-import { useRef } from 'react'
+import { CSSProperties, useRef } from 'react'
 
 interface ContainerProps {
   children: React.ReactNode
+  css?: CSSProperties
 }
 
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children, css }: ContainerProps) => {
   const containerRef = useRef<HTMLDivElement>(null!)
   return (
     <Draggable handle={'.handle'} nodeRef={containerRef}>
-      <div className={styles.container} ref={containerRef}>
+      <div className={styles.container} ref={containerRef} style={css}>
         <div className='handle'>☰</div>
         {children}
       </div>
