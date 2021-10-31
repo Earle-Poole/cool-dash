@@ -11,7 +11,7 @@ const Container = ({ children }: ContainerProps) => {
   return (
     <Draggable handle={'.handle'} nodeRef={containerRef}>
       <div className={styles.container} ref={containerRef}>
-        <div className={'.handle'}>☰</div>
+        <div className='handle'>☰</div>
         {children}
       </div>
     </Draggable>
