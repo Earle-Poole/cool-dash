@@ -6,8 +6,15 @@
     background-color: #97B8FF;
     border: 2px solid black; 
     color: black;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
 }
 
-.tick {
-    font-size: 2em;
+.countdownEventTitle {
+    display: flex;
+    justify-content: center;
+    font: 40px;
+    font-weight: bold;
 }
+

@@ -2,38 +2,23 @@ import react from "react";
 import "./countdown.css";
 
 const Countdown = () => {
-  function handleTickInit(tick) {
-    const rotation = ["Tick   ", "Counter", "Is     ", "Flippin", "Awesome"];
-    // current rotation index (we start at the first word)
-    var index = 0;
-
-    // each 3 seconds we'll update the billboard
-    setInterval(function () {
-      // get the word at the current index
-      tick.value = rotation[index];
-
-      // when we reach the end we start over at zero
-      index = index < rotation.length - 1 ? index + 1 : 0;
-    }, 3000);
-  }
+  const currentTime = Number;
+  const newDate = "Feb 5, 2022 08:30:15";
+  const timeLeft = newDate - currentTime;
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   return (
     <div>
-      <h1>Lets do this CountDown thing</h1>
-      <div class="tick" data-did-init="handleTickInit">
-        <div
-          data-repeat="true"
-          data-layout="horizontal fit"
-          data-transform="upper -> split -> delay(random, 100, 150)"
-        >
-          <span
-            data-view="flip"
-            data-transform="ascii -> arrive -> round -> char(a-zA-Z)"
-            class="tick-char"
-          ></span>
-        </div>
-      </div>
-    </div>
+      <h1>The Countdown Is On</h1>
+      <div className='countdownWidget'>{ Countdown }</div>
+      <div className='countdownEventTitle'> till my 'countdownEventName'</div>
+    
+   </div>
   );
 };
 
