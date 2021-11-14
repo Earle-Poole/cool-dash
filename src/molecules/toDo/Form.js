@@ -11,7 +11,7 @@ const Form = () => {
                 </select>
             </div>
             <div className="input-box">
-            <input type="text" placeholder="What to do?" class="todo-input" />
+            <input type="text" placeholder="What to do?" className="todo-input" />
             <button className="todo-button" type="submit">
             </button>
             </div>

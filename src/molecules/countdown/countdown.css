@@ -1,20 +1,31 @@
 .countdownWidget {
-    display: block;
-    width: 100%;
-    position: relative;
-    padding-bottom: 25%;
-    background-color: #97B8FF;
-    border: 2px solid black; 
-    color: black;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 25%;
+  background-color: #97b8ff;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
 }
 
 .countdownEventTitle {
-    display: flex;
-    justify-content: center;
-    font: 40px;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  font: 40px;
+  font-weight: bold;
 }
 
+.countdownButton {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.displayedTime {
+    display: flex;
+    
+}
