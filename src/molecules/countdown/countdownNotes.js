@@ -24,15 +24,13 @@
 
 // tell the timer to 'tick' after every second ***done
 
+// style the timer ***done
 
+// when count down has finished display: something to the effect of "it is '' today!" and make Red background ***done
 
-// Still needs to be worked on...
+// order the events chronologically ***done
 
-// style the timer
-
-// when count down has finished display: something to the effect of "it is '' today!"
-
-// make fireworks go off when it's the event day
+// auto remove day after expires ***done
 
 
 

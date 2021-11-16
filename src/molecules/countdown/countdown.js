@@ -64,7 +64,7 @@ const CountdownTimer = () => {
 
   function onButtonClick() {
     const x = {
-      date: newDateRef.current.value,
+      date: newDateRef.current.value + "T00:00:00",
       name: newNameRef.current.value,
     };
 
@@ -85,9 +85,9 @@ const CountdownTimer = () => {
   }
 
   return (
-    <div>
-      <h1>My Countdown Timer</h1>
-      <div className="eventData">
+    <div style={{ padding: "10px" }}>
+      <h1>MY COUNTDOWN</h1>
+      <div className="newEventData">
         <input
           className="eventName"
           ref={newNameRef}
@@ -100,22 +100,28 @@ const CountdownTimer = () => {
           placeholder="Enter Date of Event"
         ></input>
       </div>
-      <div>
-        <button onClick={onButtonClick} className="countdownButton">
-          Submit
-        </button>
-      </div>
-      {timerData.map((data, i) => {
-        return (
-          <CountdownDisplay
-            name={data.name}
-            timeObj={msTillEventConverter(
-              new Date(data.date).valueOf() - currentTime
-            )}
-            onRemove={() => basicRemove(data.name)}
-          />
-        );
-      })}
+      <button onClick={onButtonClick} className="startTimerButton">
+        Start Timer
+      </button>
+      {timerData
+        .sort((a, b) => {
+          const aDate = new Date(a.date).valueOf();
+          const bDate = new Date(b.date).valueOf();
+          return aDate > bDate ? 1 : -1;
+        })
+        .map((data, i) => {
+          console.log("data", data);
+          return (
+            <CountdownDisplay
+              name={data.name}
+              timeObj={msTillEventConverter(
+                new Date(data.date).valueOf() - currentTime
+              )}
+              originalDate={data.date}
+              onRemove={() => basicRemove(data.name)}
+            />
+          );
+        })}
     </div>
   );
 };

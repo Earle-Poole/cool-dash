@@ -1,31 +1,81 @@
-.countdownWidget {
-  display: block;
-  width: 100%;
-  position: relative;
-  padding-bottom: 25%;
-  background-color: #97b8ff;
-  border: 2px solid black;
-  color: black;
-  text-align: center;
-  font-size: 60px;
-  margin-top: 10px;
-}
-
-.countdownEventTitle {
-  display: flex;
-  justify-content: center;
-  font: 40px;
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
 }
 
-.countdownButton {
+.newEventData {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.eventName,
+.eventDate {
+  margin: 5px;
+  padding: 5px;
+}
+
+.startTimerButton {
   display: flex;
   justify-content: center;
   position: relative;
-  padding-bottom: 5px;
+  margin: 10px auto;
+  font-size: 18px;
+}
+
+.timerContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.timerContainer:hover {
+  box-shadow: 0 8px 16px 0 rgba;
+  opacity: 0.5;
+}
+
+.displayedEventName {
+  font-size: 32px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 5px;
 }
 
 .displayedTime {
-    display: flex;
-    
+  display: flex;
+  text-align: center;
+  padding: 0 10px 0 10px;
+  margin: 0;
+}
+
+.displayedTime > div {
+  padding: 4px;
+  font-size: 18px;
+}
+
+.removeButton {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 10px auto;
+  font-size: 12px;
+}
+
+.elapsedEvent {
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
 }
